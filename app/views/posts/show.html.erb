@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
- 
-<p>
-  <b>Name:</b>
-  <%= @post.name %>
-</p>
- 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
- 
-<p>
-  <b>Content:</b>
-  <%= @post.content %>
-</p>
- 
+<h1> Article :- <b><%=@post.name %></b> </h1>
+<hr/>
+<p id="notice"><%= notice %></tr>
+ <table border=1px border border-color="white" width="900px">
+	<tr>
+	  <td width=20%><p>Name:</p></td>
+	   <td><p><%= @post.name %> </p></td>
+	</tr>
+	 
+	<tr>
+	  <td width=20%><p>Title:</p></td>
+	   <td><p><%= @post.title %></p></td>
+	</tr>
+	 
+	<tr>
+	  <td width=20%><p>Content:</p></td>
+	   <td><p><%= @post.content %></p></td>
+	</tr>
+ </table>
 <h2>Comments</h2>
 <%= render @post.comments %>
  
@@ -25,3 +27,9 @@
  
 <%= link_to 'Edit Post', edit_post_path(@post) %> |
 <%= link_to 'Back to Posts', posts_path %> |
+<style>
+a
+{
+color:#f4f4f4;
+}
+</style>

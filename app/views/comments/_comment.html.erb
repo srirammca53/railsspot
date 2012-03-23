@@ -1,15 +1,20 @@
-<p>
-  <b>Commenter:</b>
-  <%= comment.commenter %>
-</p>
+
+<table border=1px border-color="#f4f4f4">
+	<tr>
+	  <td><p>Commenter:</p></td>
+	  <td><p><%= comment.commenter %></p></td>
+	  <td></td>
+    </tr>
  
-<p>
-  <b>Comment:</b>
-  <%= comment.body %>
-</p>
+	<tr>
+	  <td><p>Comment:</p></td>
+	  <td><p><%= comment.body %></p></td>
+	  <td>
+		<%= link_to 'Destroy Comment', [comment.post, comment],
+				   :confirm => 'Are you sure?',
+				   :method => :delete %>
+	  </td>
+	</tr>
+</table>	
  
-<p>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
-               :confirm => 'Are you sure?',
-               :method => :delete %>
-</p>
+

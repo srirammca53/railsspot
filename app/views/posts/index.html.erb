@@ -1,23 +1,21 @@
 <h1>Listing posts</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
+<table border=1px >
+  <tr width="100%">
+    <th width="15%">Name</th>
+    <th width="15%">Title</th>
+    <th width="25%">Content</th>
+    
   </tr>
 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.name %></td>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+  <tr width="100%">
+    <td width="15%""><p><%= post.name %></p></td>
+    <td width="15%"><p><%= post.title %></p></td>
+    <td width="25%"><p><%= post.content %></p></td>
+    <td width="15%"> <p><%= link_to 'Show', post %></p></td>
+    <td width="15%"><p><%= link_to 'Edit', edit_post_path(post) %></p></td>
+    <td width="15%"><p><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></p></td>
   </tr>
 <% end %>
 </table>
